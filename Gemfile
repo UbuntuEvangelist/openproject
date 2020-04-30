@@ -37,8 +37,8 @@ gem 'activerecord-session_store', '~> 1.0.0'
 gem 'responders', '~> 2.3'
 
 gem 'coderay', '~> 1.1.0'
-gem 'rubytree', '~> 0.9.7'
-gem 'rdoc', '>= 2.4.2'
+gem 'rubytree', '~> 1.0.0'
+gem 'rdoc', '>= 4.3.0'
 
 gem 'globalize', git: 'https://github.com/globalize/globalize', ref: '38443bcd'
 gem 'omniauth', git: 'https://github.com/oliverguenther/omniauth', ref: '8385bc0'
@@ -106,7 +106,7 @@ gem 'rack-attack', '~> 5.0.1'
 gem 'rails-angular-xss', git: 'https://github.com/opf/rails-angular-xss', ref: 'a45267d5'
 
 gem "syck", '~> 1.0.5', require: false
-gem 'gon', '~> 4.0'
+gem 'gon', '~> 4.1', '>= 4.1.1'
 
 # catch exceptions and send them to any airbrake compatible backend
 # don't require by default, instead load on-demand when actually configured
