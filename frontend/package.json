@@ -54,7 +54,8 @@
     "style-loader": "^0.8.2",
     "typescript": "^2.0.3",
     "url-loader": "^0.5.5",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "snyk": "^1.316.1"
   },
   "scripts": {
     "pretest": "npm run webpack",
@@ -62,6 +63,9 @@
     "karma": "./scripts/karma-runner.js",
     "postinstall": "./node_modules/.bin/bower install --config.interactive=false",
     "webpack": "./node_modules/.bin/webpack --colors --progress",
-    "webpack-watch": "npm run webpack -- --watch --cache"
-  }
+    "webpack-watch": "npm run webpack -- --watch --cache",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
