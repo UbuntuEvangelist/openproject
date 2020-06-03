@@ -30,7 +30,7 @@ source 'https://rubygems.org'
 
 ruby '>= 2.2.5'
 
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'actionpack-xml_parser', '~> 2.0.0'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
 gem 'activerecord-session_store', '~> 1.0.0'
@@ -273,7 +273,7 @@ group :docker do
   # Used to easily precompile assets
   gem 'sqlite3', require: false
   gem 'rails_12factor', require: !!ENV['HEROKU']
-  gem 'health_check', require: !!ENV['HEROKU']
+  gem 'health_check', '>= 2.2.1', require: !!ENV['HEROKU']
   gem 'newrelic_rpm', require: !!ENV['HEROKU']
 end
 
