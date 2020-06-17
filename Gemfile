@@ -30,11 +30,11 @@ source 'https://rubygems.org'
 
 ruby '>= 2.2.5'
 
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'actionpack-xml_parser', '~> 2.0.0'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
 gem 'activerecord-session_store', '~> 1.0.0'
-gem 'responders', '~> 2.3'
+gem 'responders', '~> 2.3', '>= 2.3.0'
 
 gem 'coderay', '~> 1.1.0'
 gem 'rubytree', '~> 0.9.7'
@@ -45,7 +45,7 @@ gem 'omniauth', git: 'https://github.com/oliverguenther/omniauth', ref: '8385bc0
 gem 'request_store', '~> 1.3.1'
 gem 'gravatar_image_tag', '~> 1.2.0'
 
-gem 'warden', '~> 1.2'
+gem 'warden', '~> 1.2', '>= 1.2.6'
 gem 'warden-basic_auth', '~> 0.2.1'
 
 # TODO: adds #auto_link which was deprecated in rails 3.1
@@ -94,7 +94,7 @@ gem 'oj', '~> 2.17.4'
 gem 'delayed_job_active_record', '~> 4.1.1'
 gem 'daemons'
 
-gem 'rack-protection', '~> 2.0.0.beta2'
+gem 'rack-protection', '~> 2.0.0.0'
 
 # Rack::Attack is a rack middleware to protect your web app from bad clients.
 # It allows whitelisting, blacklisting, throttling, and tracking based
@@ -106,7 +106,7 @@ gem 'rack-attack', '~> 5.0.1'
 gem 'rails-angular-xss', git: 'https://github.com/opf/rails-angular-xss', ref: 'a45267d5'
 
 gem "syck", '~> 1.0.5', require: false
-gem 'gon', '~> 4.0'
+gem 'gon', '~> 4.1', '>= 4.1.1'
 
 # catch exceptions and send them to any airbrake compatible backend
 # don't require by default, instead load on-demand when actually configured
@@ -163,11 +163,11 @@ group :test do
   # definitions from core are not available in the plugin thus specs break
   gem 'factory_girl', '~> 4.5'
   # require factory_girl_rails for convenience in core development
-  gem 'factory_girl_rails', '~> 4.7', require: false
+  gem 'factory_girl_rails', '~> 4.7', '>= 4.7.0', require: false
 
   gem 'cucumber', '~> 2.4.0'
   gem 'cucumber-rails', '~> 1.4.4', require: false
-  gem 'rack_session_access'
+  gem 'rack_session_access', '>= 0.1.1'
   gem 'database_cleaner', '~> 1.5.3'
   gem 'rspec', '~> 3.5.0'
   # also add to development group, so "spec" rake task gets loaded
@@ -232,7 +232,7 @@ group :development, :test do
 end
 
 # API gems
-gem 'grape', '~> 0.17'
+gem 'grape', '~> 0.17', '>= 0.17.0'
 gem 'grape-cache_control', '~> 1.0.1'
 
 gem 'roar',   '~> 1.0.0'
@@ -268,12 +268,12 @@ end
 # is matured enough that we can use this everywhere
 # http://bundler.io/blog/2015/06/24/version-1-10-released.html
 group :docker do
-  gem 'passenger'
+  gem 'passenger', '>= 5.0.30'
 
   # Used to easily precompile assets
   gem 'sqlite3', require: false
   gem 'rails_12factor', require: !!ENV['HEROKU']
-  gem 'health_check', require: !!ENV['HEROKU']
+  gem 'health_check', '>= 2.2.1', require: !!ENV['HEROKU']
   gem 'newrelic_rpm', require: !!ENV['HEROKU']
 end
 
