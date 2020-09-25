@@ -106,7 +106,7 @@ gem 'rack-attack', '~> 5.0.1'
 gem 'rails-angular-xss', git: 'https://github.com/opf/rails-angular-xss', ref: 'a45267d5'
 
 gem "syck", '~> 1.0.5', require: false
-gem 'gon', '~> 4.0'
+gem 'gon', '~> 6.4', '>= 6.4.0'
 
 # catch exceptions and send them to any airbrake compatible backend
 # don't require by default, instead load on-demand when actually configured
