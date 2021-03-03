@@ -30,11 +30,11 @@ source 'https://rubygems.org'
 
 ruby '>= 2.2.5'
 
-gem 'rails', '~> 5.0.0'
-gem 'actionpack-xml_parser', '~> 2.0.0'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.5'
+gem 'actionpack-xml_parser', '~> 2.0.1'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
-gem 'activerecord-session_store', '~> 1.0.0'
-gem 'responders', '~> 2.3'
+gem 'activerecord-session_store', '~> 1.1.1'
+gem 'responders', '~> 3.0', '>= 3.0.0'
 
 gem 'coderay', '~> 1.1.0'
 gem 'rubytree', '~> 0.9.7'
@@ -56,7 +56,7 @@ gem 'acts_as_tree', '~> 2.5.1'
 
 gem 'friendly_id', git: 'https://github.com/norman/friendly_id', ref: 'aff05645' # '~> 5.1.0'
 
-gem 'awesome_nested_set', '~> 3.1.1'
+gem 'awesome_nested_set', '~> 3.1.4'
 
 gem 'color-tools', '~> 1.3.0', require: 'color'
 
@@ -91,7 +91,7 @@ gem 'rabl', '~> 0.13.0'
 gem 'multi_json', '~> 1.12.1'
 gem 'oj', '~> 2.17.4'
 
-gem 'delayed_job_active_record', '~> 4.1.1'
+gem 'delayed_job_active_record', '~> 4.1.3'
 gem 'daemons'
 
 gem 'rack-protection', '~> 2.0.0.beta2'
@@ -106,7 +106,7 @@ gem 'rack-attack', '~> 5.0.1'
 gem 'rails-angular-xss', git: 'https://github.com/opf/rails-angular-xss', ref: 'a45267d5'
 
 gem "syck", '~> 1.0.5', require: false
-gem 'gon', '~> 4.0'
+gem 'gon', '~> 4.1', '>= 4.1.1'
 
 # catch exceptions and send them to any airbrake compatible backend
 # don't require by default, instead load on-demand when actually configured
@@ -132,7 +132,7 @@ group :production do
 end
 
 gem 'sprockets', '~> 3.7.0'
-gem 'sass-rails', '~> 5.0.6'
+gem 'sass-rails', '~> 5.0.8'
 gem 'sass', '~> 3.4.12'
 gem 'autoprefixer-rails', '~> 6.4.1'
 gem 'bourbon', '~> 4.2.0'
@@ -163,10 +163,10 @@ group :test do
   # definitions from core are not available in the plugin thus specs break
   gem 'factory_girl', '~> 4.5'
   # require factory_girl_rails for convenience in core development
-  gem 'factory_girl_rails', '~> 4.7', require: false
+  gem 'factory_girl_rails', '~> 4.7', '>= 4.7.0', require: false
 
   gem 'cucumber', '~> 2.4.0'
-  gem 'cucumber-rails', '~> 1.4.4', require: false
+  gem 'cucumber-rails', '~> 1.7.0', require: false
   gem 'rack_session_access'
   gem 'database_cleaner', '~> 1.5.3'
   gem 'rspec', '~> 3.5.0'
@@ -273,7 +273,7 @@ group :docker do
   # Used to easily precompile assets
   gem 'sqlite3', require: false
   gem 'rails_12factor', require: !!ENV['HEROKU']
-  gem 'health_check', require: !!ENV['HEROKU']
+  gem 'health_check', '>= 2.2.1', require: !!ENV['HEROKU']
   gem 'newrelic_rpm', require: !!ENV['HEROKU']
 end
 
