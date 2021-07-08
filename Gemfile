@@ -210,7 +210,7 @@ group :ldap do
 end
 
 group :development do
-  gem 'letter_opener'
+  gem 'letter_opener', '>= 1.4.1'
   gem 'faker'
   gem 'livingstyleguide', '~> 2.0.1'
 
