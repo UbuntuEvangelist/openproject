@@ -38,7 +38,7 @@ gem 'responders', '~> 2.3'
 
 gem 'coderay', '~> 1.1.0'
 gem 'rubytree', '~> 0.9.7'
-gem 'rdoc', '>= 2.4.2'
+gem 'rdoc', '>= 6.3.1'
 
 gem 'globalize', git: 'https://github.com/globalize/globalize', ref: '38443bcd'
 gem 'omniauth', git: 'https://github.com/oliverguenther/omniauth', ref: '8385bc0'
