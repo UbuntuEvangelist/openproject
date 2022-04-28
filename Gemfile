@@ -30,11 +30,11 @@ source 'https://rubygems.org'
 
 ruby '>= 2.2.5'
 
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.2.7', '>= 5.2.7.1'
 gem 'actionpack-xml_parser', '~> 2.0.0'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
-gem 'activerecord-session_store', '~> 1.0.0'
-gem 'responders', '~> 2.3'
+gem 'activerecord-session_store', '~> 1.1.1'
+gem 'responders', '~> 2.4', '>= 2.4.0'
 
 gem 'coderay', '~> 1.1.0'
 gem 'rubytree', '~> 0.9.7'
@@ -106,7 +106,7 @@ gem 'rack-attack', '~> 5.0.1'
 gem 'rails-angular-xss', git: 'https://github.com/opf/rails-angular-xss', ref: 'a45267d5'
 
 gem "syck", '~> 1.0.5', require: false
-gem 'gon', '~> 4.0'
+gem 'gon', '~> 4.1', '>= 4.1.1'
 
 # catch exceptions and send them to any airbrake compatible backend
 # don't require by default, instead load on-demand when actually configured
@@ -163,10 +163,10 @@ group :test do
   # definitions from core are not available in the plugin thus specs break
   gem 'factory_girl', '~> 4.5'
   # require factory_girl_rails for convenience in core development
-  gem 'factory_girl_rails', '~> 4.7', require: false
+  gem 'factory_girl_rails', '~> 4.7', '>= 4.7.0', require: false
 
   gem 'cucumber', '~> 2.4.0'
-  gem 'cucumber-rails', '~> 1.4.4', require: false
+  gem 'cucumber-rails', '~> 1.6.0', require: false
   gem 'rack_session_access'
   gem 'database_cleaner', '~> 1.5.3'
   gem 'rspec', '~> 3.5.0'
