@@ -30,11 +30,11 @@ source 'https://rubygems.org'
 
 ruby '>= 2.2.5'
 
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'actionpack-xml_parser', '~> 2.0.0'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
 gem 'activerecord-session_store', '~> 1.0.0'
-gem 'responders', '~> 2.3'
+gem 'responders', '~> 2.3', '>= 2.3.0'
 
 gem 'coderay', '~> 1.1.0'
 gem 'rubytree', '~> 0.9.7'
@@ -63,7 +63,7 @@ gem 'color-tools', '~> 1.3.0', require: 'color'
 gem 'ruby-progressbar'
 
 # Provide timezone info for TZInfo used by AR
-gem 'tzinfo-data', '~> 1.2016.1'
+gem 'tzinfo-data', '~> 1.2016.6'
 
 # to generate html-diffs (e.g. for wiki comparison)
 gem 'htmldiff'
@@ -76,7 +76,7 @@ gem 'stringex', '~> 2.6.1'
 gem 'svg-graph', '~> 2.0.1'
 
 gem 'date_validator', '~> 0.9.0'
-gem 'ruby-duration', '~> 3.2.0'
+gem 'ruby-duration', '~> 3.2.3'
 
 # provide compatible filesystem information for available storage
 gem 'sys-filesystem', '~> 1.1.4', require: false
@@ -106,7 +106,7 @@ gem 'rack-attack', '~> 5.0.1'
 gem 'rails-angular-xss', git: 'https://github.com/opf/rails-angular-xss', ref: 'a45267d5'
 
 gem "syck", '~> 1.0.5', require: false
-gem 'gon', '~> 4.0'
+gem 'gon', '~> 4.1', '>= 4.1.1'
 
 # catch exceptions and send them to any airbrake compatible backend
 # don't require by default, instead load on-demand when actually configured
@@ -161,9 +161,9 @@ group :test do
   # Require factory_girl for usage with openproject plugins testing
   # FactoryGirl needs to be available when loading app otherwise factory
   # definitions from core are not available in the plugin thus specs break
-  gem 'factory_girl', '~> 4.5'
+  gem 'factory_girl', '~> 4.7', '>= 4.7.0'
   # require factory_girl_rails for convenience in core development
-  gem 'factory_girl_rails', '~> 4.7', require: false
+  gem 'factory_girl_rails', '~> 4.7', '>= 4.7.0', require: false
 
   gem 'cucumber', '~> 2.4.0'
   gem 'cucumber-rails', '~> 1.4.4', require: false
@@ -197,7 +197,7 @@ group :test do
   gem 'webmock', '~> 2.1.0', require: false
 
   gem 'simplecov', '~> 0.12.0', require: false
-  gem 'shoulda-matchers', '~> 3.1', require: nil
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1', require: nil
   gem 'json_spec', '~> 1.1.4'
   gem 'codecov', '~> 0.1.5', require: nil
   gem 'equivalent-xml', '~> 0.6'
@@ -232,7 +232,7 @@ group :development, :test do
 end
 
 # API gems
-gem 'grape', '~> 0.17'
+gem 'grape', '~> 0.17', '>= 0.17.0'
 gem 'grape-cache_control', '~> 1.0.1'
 
 gem 'roar',   '~> 1.0.0'
