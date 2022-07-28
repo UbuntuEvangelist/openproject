@@ -30,10 +30,10 @@ source 'https://rubygems.org'
 
 ruby '>= 2.2.5'
 
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.2.8', '>= 5.2.8.1'
 gem 'actionpack-xml_parser', '~> 2.0.0'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
-gem 'activerecord-session_store', '~> 1.0.0'
+gem 'activerecord-session_store', '~> 1.1.1'
 gem 'responders', '~> 2.3'
 
 gem 'coderay', '~> 1.1.0'
@@ -56,7 +56,7 @@ gem 'acts_as_tree', '~> 2.5.1'
 
 gem 'friendly_id', git: 'https://github.com/norman/friendly_id', ref: 'aff05645' # '~> 5.1.0'
 
-gem 'awesome_nested_set', '~> 3.1.1'
+gem 'awesome_nested_set', '~> 3.1.4'
 
 gem 'color-tools', '~> 1.3.0', require: 'color'
 
@@ -91,7 +91,7 @@ gem 'rabl', '~> 0.13.0'
 gem 'multi_json', '~> 1.12.1'
 gem 'oj', '~> 2.17.4'
 
-gem 'delayed_job_active_record', '~> 4.1.1'
+gem 'delayed_job_active_record', '~> 4.1.3'
 gem 'daemons'
 
 gem 'rack-protection', '~> 2.0.0.beta2'
