@@ -41,7 +41,7 @@
     "expose-loader": "^0.6.0",
     "extract-text-webpack-plugin": "^0.3.8",
     "file-loader": "^0.8.1",
-    "glob": "^4.5.3",
+    "glob": "^5.0.15",
     "html-loader": "^0.2.3",
     "json5": "^0.4.0",
     "lodash": "^4.17.2",
