@@ -30,7 +30,7 @@ source 'https://rubygems.org'
 
 ruby '>= 2.2.5'
 
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'actionpack-xml_parser', '~> 2.0.0'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
 gem 'activerecord-session_store', '~> 1.0.0'
@@ -131,8 +131,8 @@ group :production do
   gem 'unicorn-worker-killer', require: false
 end
 
-gem 'sprockets', '~> 3.7.0'
-gem 'sass-rails', '~> 5.0.6'
+gem 'sprockets', '~> 4.2.0'
+gem 'sass-rails', '~> 6.0.0'
 gem 'sass', '~> 3.4.12'
 gem 'autoprefixer-rails', '~> 6.4.1'
 gem 'bourbon', '~> 4.2.0'
