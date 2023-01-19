@@ -30,11 +30,11 @@ source 'https://rubygems.org'
 
 ruby '>= 2.2.5'
 
-gem 'rails', '~> 5.0.0'
-gem 'actionpack-xml_parser', '~> 2.0.0'
+gem 'rails', '~> 6.1.7', '>= 6.1.7.1'
+gem 'actionpack-xml_parser', '~> 2.0.1'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
-gem 'activerecord-session_store', '~> 1.0.0'
-gem 'responders', '~> 2.3'
+gem 'activerecord-session_store', '~> 1.1.1'
+gem 'responders', '~> 3.0', '>= 3.0.0'
 
 gem 'coderay', '~> 1.1.0'
 gem 'rubytree', '~> 0.9.7'
@@ -45,7 +45,7 @@ gem 'omniauth', git: 'https://github.com/oliverguenther/omniauth', ref: '8385bc0
 gem 'request_store', '~> 1.3.1'
 gem 'gravatar_image_tag', '~> 1.2.0'
 
-gem 'warden', '~> 1.2'
+gem 'warden', '~> 1.2', '>= 1.2.6'
 gem 'warden-basic_auth', '~> 0.2.1'
 
 # TODO: adds #auto_link which was deprecated in rails 3.1
@@ -56,7 +56,7 @@ gem 'acts_as_tree', '~> 2.5.1'
 
 gem 'friendly_id', git: 'https://github.com/norman/friendly_id', ref: 'aff05645' # '~> 5.1.0'
 
-gem 'awesome_nested_set', '~> 3.1.1'
+gem 'awesome_nested_set', '~> 3.2.0'
 
 gem 'color-tools', '~> 1.3.0', require: 'color'
 
@@ -76,7 +76,7 @@ gem 'stringex', '~> 2.6.1'
 gem 'svg-graph', '~> 2.0.1'
 
 gem 'date_validator', '~> 0.9.0'
-gem 'ruby-duration', '~> 3.2.0'
+gem 'ruby-duration', '~> 3.2.3'
 
 # provide compatible filesystem information for available storage
 gem 'sys-filesystem', '~> 1.1.4', require: false
@@ -91,10 +91,10 @@ gem 'rabl', '~> 0.13.0'
 gem 'multi_json', '~> 1.12.1'
 gem 'oj', '~> 2.17.4'
 
-gem 'delayed_job_active_record', '~> 4.1.1'
+gem 'delayed_job_active_record', '~> 4.1.5'
 gem 'daemons'
 
-gem 'rack-protection', '~> 2.0.0.beta2'
+gem 'rack-protection', '~> 2.0.0.0'
 
 # Rack::Attack is a rack middleware to protect your web app from bad clients.
 # It allows whitelisting, blacklisting, throttling, and tracking based
@@ -106,7 +106,7 @@ gem 'rack-attack', '~> 5.0.1'
 gem 'rails-angular-xss', git: 'https://github.com/opf/rails-angular-xss', ref: 'a45267d5'
 
 gem "syck", '~> 1.0.5', require: false
-gem 'gon', '~> 4.0'
+gem 'gon', '~> 4.1', '>= 4.1.1'
 
 # catch exceptions and send them to any airbrake compatible backend
 # don't require by default, instead load on-demand when actually configured
@@ -132,7 +132,7 @@ group :production do
 end
 
 gem 'sprockets', '~> 3.7.0'
-gem 'sass-rails', '~> 5.0.6'
+gem 'sass-rails', '~> 5.0.8'
 gem 'sass', '~> 3.4.12'
 gem 'autoprefixer-rails', '~> 6.4.1'
 gem 'bourbon', '~> 4.2.0'
@@ -161,12 +161,12 @@ group :test do
   # Require factory_girl for usage with openproject plugins testing
   # FactoryGirl needs to be available when loading app otherwise factory
   # definitions from core are not available in the plugin thus specs break
-  gem 'factory_girl', '~> 4.5'
+  gem 'factory_girl', '~> 4.7', '>= 4.7.0'
   # require factory_girl_rails for convenience in core development
-  gem 'factory_girl_rails', '~> 4.7', require: false
+  gem 'factory_girl_rails', '~> 4.7', '>= 4.7.0', require: false
 
   gem 'cucumber', '~> 2.4.0'
-  gem 'cucumber-rails', '~> 1.4.4', require: false
+  gem 'cucumber-rails', '~> 1.7.0', require: false
   gem 'rack_session_access'
   gem 'database_cleaner', '~> 1.5.3'
   gem 'rspec', '~> 3.5.0'
@@ -197,7 +197,7 @@ group :test do
   gem 'webmock', '~> 2.1.0', require: false
 
   gem 'simplecov', '~> 0.12.0', require: false
-  gem 'shoulda-matchers', '~> 3.1', require: nil
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1', require: nil
   gem 'json_spec', '~> 1.1.4'
   gem 'codecov', '~> 0.1.5', require: nil
   gem 'equivalent-xml', '~> 0.6'
@@ -232,7 +232,7 @@ group :development, :test do
 end
 
 # API gems
-gem 'grape', '~> 0.17'
+gem 'grape', '~> 0.17', '>= 0.17.0'
 gem 'grape-cache_control', '~> 1.0.1'
 
 gem 'roar',   '~> 1.0.0'
