@@ -30,11 +30,11 @@ source 'https://rubygems.org'
 
 ruby '>= 2.2.5'
 
-gem 'rails', '~> 5.0.0'
-gem 'actionpack-xml_parser', '~> 2.0.0'
+gem 'rails', '~> 5.0.1'
+gem 'actionpack-xml_parser', '~> 2.0.1'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
-gem 'activerecord-session_store', '~> 1.0.0'
-gem 'responders', '~> 2.3'
+gem 'activerecord-session_store', '~> 1.1.0'
+gem 'responders', '~> 2.4', '>= 2.4.0'
 
 gem 'coderay', '~> 1.1.0'
 gem 'rubytree', '~> 0.9.7'
@@ -49,7 +49,7 @@ gem 'warden', '~> 1.2'
 gem 'warden-basic_auth', '~> 0.2.1'
 
 # TODO: adds #auto_link which was deprecated in rails 3.1
-gem 'rails_autolink', '~> 1.1.6'
+gem 'rails_autolink', '~> 1.1.7'
 gem 'will_paginate', '~> 3.1.0'
 gem 'acts_as_list', '~> 0.8.1'
 gem 'acts_as_tree', '~> 2.5.1'
@@ -106,7 +106,7 @@ gem 'rack-attack', '~> 5.0.1'
 gem 'rails-angular-xss', git: 'https://github.com/opf/rails-angular-xss', ref: 'a45267d5'
 
 gem "syck", '~> 1.0.5', require: false
-gem 'gon', '~> 4.0'
+gem 'gon', '~> 5.0', '>= 5.0.0'
 
 # catch exceptions and send them to any airbrake compatible backend
 # don't require by default, instead load on-demand when actually configured
@@ -118,7 +118,7 @@ gem 'transactional_lock', git: 'https://github.com/finnlabs/transactional_lock.g
 gem 'prawn', '~> 2.1'
 gem 'prawn-table', '~> 0.2.2'
 
-gem 'cells-rails', '~> 0.0.6'
+gem 'cells-rails', '~> 0.0.7'
 gem 'cells-erb', '~> 0.0.8'
 
 group :production do
@@ -132,7 +132,7 @@ group :production do
 end
 
 gem 'sprockets', '~> 3.7.0'
-gem 'sass-rails', '~> 5.0.6'
+gem 'sass-rails', '~> 5.0.7'
 gem 'sass', '~> 3.4.12'
 gem 'autoprefixer-rails', '~> 6.4.1'
 gem 'bourbon', '~> 4.2.0'
@@ -145,12 +145,12 @@ gem 'cocaine', '~> 0.5.8'
 # also, better than thin since we can control worker concurrency.
 gem 'unicorn'
 
-gem 'nokogiri', '~> 1.6.8'
+gem 'nokogiri', '~> 1.11.4'
 
 # carrierwave 0.11.3 should allow to use fog-aws without the rest of the
 # fog dependency chain. We only need aws here, so we can avoid it
 # at the cost of referencing carrierwave#master for now.
-gem 'fog-aws'
+gem 'fog-aws', '>= 0.12.0'
 gem 'carrierwave', git: 'https://github.com/carrierwaveuploader/carrierwave', branch: 'master'
 
 group :test do
@@ -163,15 +163,15 @@ group :test do
   # definitions from core are not available in the plugin thus specs break
   gem 'factory_girl', '~> 4.5'
   # require factory_girl_rails for convenience in core development
-  gem 'factory_girl_rails', '~> 4.7', require: false
+  gem 'factory_girl_rails', '~> 4.8', '>= 4.8.0', require: false
 
   gem 'cucumber', '~> 2.4.0'
-  gem 'cucumber-rails', '~> 1.4.4', require: false
+  gem 'cucumber-rails', '~> 1.4.5', require: false
   gem 'rack_session_access'
   gem 'database_cleaner', '~> 1.5.3'
   gem 'rspec', '~> 3.5.0'
   # also add to development group, so "spec" rake task gets loaded
-  gem 'rspec-rails', '~> 3.5.2', group: :development
+  gem 'rspec-rails', '~> 3.6.0', group: :development
   gem 'rspec-activemodel-mocks', '~> 1.0.3', git: 'https://github.com/rspec/rspec-activemodel-mocks'
 
   # Retry failures within the same environment
@@ -187,8 +187,8 @@ group :test do
   # More information: https://github.com/rspec/rspec-rails/issues/1644
   gem 'rails-controller-testing', git: 'https://github.com/rails/rails-controller-testing/'
 
-  gem 'capybara', '~> 2.8.1'
-  gem 'capybara-screenshot', '~> 1.0.14'
+  gem 'capybara', '~> 2.9.0'
+  gem 'capybara-screenshot', '~> 1.0.15'
   gem 'fuubar', '~> 2.2.0'
   gem 'capybara-select2', git: 'https://github.com/goodwill/capybara-select2', ref: '585192e'
   gem 'capybara-ng', '~> 0.2.7'
@@ -235,8 +235,8 @@ end
 gem 'grape', '~> 0.17'
 gem 'grape-cache_control', '~> 1.0.1'
 
-gem 'roar',   '~> 1.0.0'
-gem 'reform', '~> 1.2.6', require: false
+gem 'roar', '~> 1.1.0'
+gem 'reform', '~> 2.0.0', require: false
 
 platforms :mri, :mingw, :x64_mingw do
   group :mysql2 do
@@ -273,7 +273,7 @@ group :docker do
   # Used to easily precompile assets
   gem 'sqlite3', require: false
   gem 'rails_12factor', require: !!ENV['HEROKU']
-  gem 'health_check', require: !!ENV['HEROKU']
+  gem 'health_check', '>= 2.3.0', require: !!ENV['HEROKU']
   gem 'newrelic_rpm', require: !!ENV['HEROKU']
 end
 
