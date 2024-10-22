@@ -30,7 +30,7 @@ source 'https://rubygems.org'
 
 ruby '>= 2.2.5'
 
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 7.0.0'
 gem 'actionpack-xml_parser', '~> 2.0.0'
 gem 'activemodel-serializers-xml', '~> 1.0.1'
 gem 'activerecord-session_store', '~> 1.0.0'
@@ -49,7 +49,7 @@ gem 'warden', '~> 1.2'
 gem 'warden-basic_auth', '~> 0.2.1'
 
 # TODO: adds #auto_link which was deprecated in rails 3.1
-gem 'rails_autolink', '~> 1.1.6'
+gem 'rails_autolink', '~> 1.1.8'
 gem 'will_paginate', '~> 3.1.0'
 gem 'acts_as_list', '~> 0.8.1'
 gem 'acts_as_tree', '~> 2.5.1'
@@ -132,7 +132,7 @@ group :production do
 end
 
 gem 'sprockets', '~> 3.7.0'
-gem 'sass-rails', '~> 5.0.6'
+gem 'sass-rails', '~> 6.0.0'
 gem 'sass', '~> 3.4.12'
 gem 'autoprefixer-rails', '~> 6.4.1'
 gem 'bourbon', '~> 4.2.0'
@@ -166,7 +166,7 @@ group :test do
   gem 'factory_girl_rails', '~> 4.7', require: false
 
   gem 'cucumber', '~> 2.4.0'
-  gem 'cucumber-rails', '~> 1.4.4', require: false
+  gem 'cucumber-rails', '~> 2.1.0', require: false
   gem 'rack_session_access'
   gem 'database_cleaner', '~> 1.5.3'
   gem 'rspec', '~> 3.5.0'
@@ -273,7 +273,7 @@ group :docker do
   # Used to easily precompile assets
   gem 'sqlite3', require: false
   gem 'rails_12factor', require: !!ENV['HEROKU']
-  gem 'health_check', require: !!ENV['HEROKU']
+  gem 'health_check', '>= 2.8.0', require: !!ENV['HEROKU']
   gem 'newrelic_rpm', require: !!ENV['HEROKU']
 end
 
